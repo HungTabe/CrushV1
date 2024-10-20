@@ -21,11 +21,36 @@
             <div class="boxSlider">
                     <div class="listSlider">
                         <div class="slider">
-                            <img src="../image/love1.jfif" alt="">
+                            <img src="../image/a1.png" alt="">
                         </div>
                         <div class="slider">
-                            <img src="../image/love2.png" alt="">
+                            <img src="../image/a2.png" alt="">
                         </div>
+                        <div class="slider">
+                            <img src="../image/a3.png" alt="">
+                        </div>
+                        <div class="slider">
+                            <img src="../image/a4.png" alt="">
+                        </div>
+                        <div class="slider">
+                            <img src="../image/a5.png" alt="">
+                        </div>
+                        <div class="slider">
+                            <img src="../image/a6.png" alt="">
+                        </div>
+                        <div class="slider">
+                            <img src="../image/a7.png" alt="">
+                        </div>
+                        <div class="slider">
+                            <img src="../image/a8.png" alt="">
+                        </div>
+                        <div class="slider">
+                            <img src="../image/a9.png" alt="">
+                        </div>
+                        <div class="slider">
+                            <img src="../image/a1.png" alt="">
+                        </div>
+                     
                     </div>
                 <div class="left">
                     <i class="fa-solid fa-chevron-left"></i>
@@ -92,11 +117,11 @@
                 </div>
                 
                 <div class="wrapperLetter">
-                    <div class="giftbox">
+                    <!-- <div class="giftbox">
                         <div class="img">
                             <img src="../image/giftbox.png" alt="">
                         </div>
-                    </div>
+                    </div> -->
                     <div class="textLetter">
                         <h2></h2>
                         <p class="contentLetter"></p>
@@ -171,7 +196,7 @@
     }
 
     const inputField = document.getElementById('inputField');
-    const textToType = "Ngân Hà"; // thay đổi tên người yêu của bạn
+    const textToType = "Letter to Mỹ Hà Sugar"; // thay đổi tên người yêu của bạn
     const typingSpeed = 100; // milliseconds per character
 
     let charIndex = 0;
@@ -185,37 +210,37 @@
             setTimeout(()=>{
                 document.querySelector(".buttonLove").style.transform = "translateY(0%)";
                 document.querySelector(".cricleBtn").style.transform = "scale(0.1)"
-            },1000)
+            },500)
             setTimeout(()=>{
                 document.querySelector(".cricleBtn").style.transform = "scale(1)"
                 document.querySelector(".cricleBtn").innerHTML = "💗"
-            },2000)
+            },1000)
             setTimeout(()=>{
                 document.querySelector(".buttonLove").style.width = "120px"
                 document.querySelector(".button").style.transform = "translateX(25px)"
-            },2500)
+            },1250)
             setTimeout(()=>{
                 document.querySelector(".button").style.width = "calc(100% - 25px)"
                 document.querySelector(".button").style.height = "10px"
-            },3000)
+            },1500)
             setTimeout(()=>{
                 document.querySelector(".button").style.height = "30px"
-            },3500)
+            },1750)
             setTimeout(()=>{
                 document.querySelector(".button").innerHTML = "Nhận thư"
-            },4000)
+            },200)
         }
     }
 
     setTimeout(()=>{
         typeText();
-    }, 11500)
+    }, 500)
     });
 
     // .textLetter text h2
     let indexText = 0;
     let textLetter = document.querySelector('.textLetter h2');
-    const textLetterH2 = "Gửi em!";
+    const textLetterH2 = "Gửi Pé Đường yêu dấu!";
     let timoutTextLetter;
 
     function textCharLetter(){
@@ -237,14 +262,14 @@
         clearInterval(timoutTextLetter);
         timoutTextLetter =  setInterval(()=>{
                 textCharLetter();
-            }, 200)
+            }, 20)
     }
 
     // chữ của thư bạn muốn gửi
     let indexTextContent = 0;
     let textLetterContent = document.querySelector('.contentLetter');
     // thay đổi lời chúc
-    const textLetterP = "1 tuần có 7 ngày. 1 ngày có 24 giờ. 1 giờ có 60 phút. 1 phút có 60 giây. Không có một ngày hoặc giờ mà tôi không nhớ bạn. Không có giây phút nào mà anh không nghĩ đến cậu. Tâm hồn và trái tim tôi tràn ngập bạn. Nhớ và yêu em nhiều lắm.";
+    const textLetterP = "1 tuần có 7 ngày. 1 ngày có 24 giờ. 1 giờ có 60 phút. 1 phút có 60 giây. Không có một ngày hoặc giờ mà tôi không nhớ bạn. Không có giây phút nào mà anh không nghĩ đến cậu. Tâm hồn và trái tim tôi tràn ngập bạn. Nhớ và yêu em nhiều lắm.Chúc Hà có một ngày 20/10 thật vui vẻ và ý nghĩa.Hihi";
     let timoutTextLetterContent;
     function textCharLetterContent(){
         if (indexTextContent < textLetterP.length) {
@@ -288,10 +313,10 @@
             letters.style.transform = `rotate(${rotate}deg)`;
             setTimeout(()=>{
                 letters.style.top = "100%";
-            },1000)
+            },20)
             setTimeout(()=>{
                 letters.remove()
-            },11000)
+            },9000)
             document.querySelectorAll(".letters").forEach((item)=>{
                 item.addEventListener("click", function(){
                     clearInterval(timeout)
@@ -300,7 +325,7 @@
                     
                 })
             })
-        },500)
+        },150)
     })
 
     document.querySelector(".fa-xmark").addEventListener("click", function(){

@@ -1,109 +1,88 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background: rgb(255, 218, 232);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
-.loading{
+
+.loading {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    max-width: 375px; /* Để giới hạn độ rộng tối đa trên thiết bị nhỏ */
+    padding: 20px; /* Thêm padding để tránh các cạnh */
 }
-.loading .boxHeartImg{
+
+.loading .boxHeartImg {
     position: absolute;
     width: 100%;
     top: -40px;
     display: flex;
     justify-content: space-between;
 }
-.heartItem.item1{
+
+.heartItem {
     position: relative;
-    left: -4%;
+}
+
+.heartItem.item1 {
     transform: scale(0);
 }
-.heartItem.item2{
-    position: relative;
-    left: 4%;
+.heartItem.item2 {
     transform: scale(0);
 }
-.heartItem.item3{
-    position: relative;
-    right: -6%;
+.heartItem.item3 {
     transform: scale(0);
 }
-/* animation: love1 5s infinite ease-in 1s; */
-/* @keyframes love1{
-    0%{
-        opacity: 0;
-        transform: scale(0.2) rotate(0deg) translate3d(100px, 0, 0);
-    }
-    50%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-        transform: scale(0.8) rotate(-40deg) translate3d(-50px, -400px, 0);
-    }
-} */
-@keyframes heartScale{
-    0%{
+
+@keyframes heartScale {
+    0% {
         transform: scale(0);
     }
-    30%{
+    30% {
         transform: scale(1.2);
     }
-    50%,100%{
+    50%, 100% {
         transform: scale(1);
     }
 }
-.heartItem.item1 img{
-    width: 40px;
+
+.heartItem img {
+    width: 40px; /* Kích thước hình trái tim */
 }
-.heartItem.item2 img{
-    width: 50px;
-    transform: translateY(-10px);
-}
-.heartItem.item3 img{
-    width: 60px;
-    transform: translateY(-20px);
-}
-.heartItem::before{
-    position: absolute;
-    content: '';
-    width: 3px;
-    height: 40px;
-    background-color: rgb(91,81,84);
-    left: 51%;
-    top: 10px;
-    transform: translateX(-50%);
-    z-index: -1;
-}
-.progress-bar{
+
+.progress-bar {
     position: relative;
-    width: 400px;
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    max-width: 400px; /* Giới hạn chiều rộng tối đa */
     height: 45px;
     background: #fff;
     padding: 3px;
-    border: 3px solid rgb(91,81,84);
+    border: 3px solid rgb(91, 81, 84);
     display: flex;
 }
-.progress{
-    width: 0px;
+
+.progress {
+    width: 0;
     height: 100%;
-    background-color: rgb(244,118,121);
+    background-color: rgb(244, 118, 121);
     left: 0;
     transition: 0.1s;
 }
-.percent{
+
+.percent {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -111,58 +90,42 @@ body{
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
 }
-.loading .textBox{
+
+.loading .textBox {
     transition: 0.5s;
     margin-top: 10px;
+    text-align: center; /* Căn giữa nội dung */
 }
-.loading .textLoad{
+
+.loading .textLoad {
     font-family: 'Roboto', sans-serif;
-    color: rgb(244,118,121);
-    font-family: 500;
+    color: rgb(244, 118, 121);
     font-size: 20px;
     text-transform: uppercase;
 }
-.loading h2 .cricle1, .cricle2, .cricle3{
-    color: rgb(244,118,121);
-    opacity: 0;
-}
-.cricle1{
-    animation: 1s .25s cricle linear infinite;
-}
-.cricle2{
-    animation: 1s .5s cricle linear infinite;
-}
-.cricle3{
-    animation: 1s .75s cricle linear infinite;
-}
-@keyframes cricle{
-    0%{
-        opacity: 0;
-    }
-    50%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
-}
-.button{
+
+.button {
     position: relative;
-    width: 10px;
-    height: 10px;
+    width: 80%; /* Đặt kích thước cho nút */
+    height: 50px; /* Kích thước nút */
     background: #fff;
-    border-radius: 50%;
-    transition: 0.5s;
-    transform: scale(0);
+    border-radius: 25px; /* Bo tròn nút */
+    margin-top: 20px; /* Khoảng cách trên */
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Roboto', sans-serif;
     cursor: pointer;
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     letter-spacing: 1px;
+    transition: background 0.3s; /* Hiệu ứng khi hover */
 }
-.buttonCLick{
+
+.button:hover {
+    background: rgba(244, 118, 121, 0.8); /* Hiệu ứng hover */
+}
+
+.buttonCLick {
     position: relative;
     display: flex;
     height: 40px;
@@ -170,68 +133,34 @@ body{
     margin-top: -20px;
     filter: drop-shadow(rgba(0, 0, 0, 0.25) 1.95px 1.95px 2.6px);
 }
-.buttonCLick img{
-    opacity: 0;
+
+.buttonCLick img {
     width: 25px;
-    position: absolute;
-    margin-left: -20px;
-    transform: translateX(-20px) rotate(90deg);
-    animation: 1s cursor infinite linear;
+    margin-right: 10px; /* Khoảng cách giữa con trỏ và nút */
 }
-@keyframes cursor{
-    0%{
-        transform: translateX(-20px) rotate(90deg);
-    }
-    50%{
-        transform: translateX(-10px) rotate(90deg);
-    }
-}
-.heartBox{
+
+.heartBox {
     position: absolute;
     top: -40px;
     left: -3.2%;
     width: 40px;
     height: 30px;
     border-radius: 10px;
-    background-color: rgb(244,118,121);
+    background-color: rgb(244, 118, 121);
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: 0.1s;
 }
-.heartBox::before{
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: rgb(244,118,121) transparent transparent transparent;
-}
-.heartBox .heart{
-    position: relative;
-    width: 10px;
-    height: 10px;
-    background-color: #fff;
-    transform: rotate(45deg);
-}
-.heartBox .heart::before{
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    right: 50%;
-    border-radius: 50%;
-}
-.heartBox .heart::after{
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    bottom: 50%;
-    border-radius: 50%;
+
+/* Responsive adjustments */
+@media (max-width: 375px) {
+    .loading .textLoad {
+        font-size: 18px; /* Giảm kích thước chữ cho màn hình nhỏ */
+    }
+
+    .button {
+        height: 45px; /* Kích thước nút nhỏ hơn */
+    }
 }

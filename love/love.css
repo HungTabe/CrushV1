@@ -33,6 +33,7 @@ body{
     padding-bottom: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     animation: formInput 1s 3s forwards;
+    min-width: 87%;
 }
 @keyframes formInput {
     0%{
@@ -117,12 +118,13 @@ body{
 .boxSlider{
     position: relative;
     margin-top: 70px;
-    width: 100%;
+    width: 148%;
     display: flex;
     justify-content: center;
     opacity: 0;
     transition: 1s;
     animation: boxSlider 1s 8s forwards ease-out;
+    min-height: 210px !important;
 }
 @keyframes boxSlider {
     0%{
@@ -150,7 +152,8 @@ body{
 
 .listSlider{
     position: relative;
-    width: 200px;
+    height: 205px !important;
+    width: 274px;
     height: 100px;
     display: flex;
     overflow: hidden;
@@ -163,9 +166,9 @@ body{
     transition: 0.5s;
 }
 .listSlider img{
-    width: 200px;
+    width: 275px;
     height: 100%;
-    object-fit: cover;
+    object-fit:cover;
 }
 .boxHandsInput{
     display: flex;
@@ -267,14 +270,15 @@ body{
     background: #ff9fda;
 }
 .boxCar{
-    position: absolute;
-    bottom: 15%;
+    position: relative;
+    bottom: -64%;
+    right: 6%;
     transform: translateX(-400px);
     z-index: 2;
     animation: car 4s 1s forwards, car1 2s 5s forwards;
 }
 .boxCar img{
-    width: 350px;
+    width: 250px;
 }
 @keyframes car{
     0%{
@@ -642,11 +646,11 @@ body{
     z-index: 100;
 }
 .giftbox img{
-    width: 100%;
+    width: 46%;
 }
 .textLetter{
     position: relative;
-    width: 60%;
+    width: 100%;
     flex-direction: column;
     display: flex;
     align-items: center;
